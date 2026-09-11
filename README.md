@@ -22,7 +22,9 @@ Projeto desenvolvido como parte do Desafio Web, com foco na criação de uma pá
 │
 ├── index.html          → Página principal (Landing Page)
 ├── grazzie.html        → Página de confirmação de pedido
-├── style.css           → Folha de estilos unificada
+│
+├── /css/               
+│   └── style.css       → Folha de estilos unificada
 │
 ├── /assets/            → Recursos visuais
 │   └── /images/        → Imagens de fundo, logos e avatares
