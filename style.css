@@ -1,0 +1,526 @@
+/* ======= Variáveis e Reset Global (Paleta de Cores) ======= */
+:root {
+    --primary: #b07d62;       /* Tom de caramelo/café claro */
+    --primary-dark: #8b5e34;  /* Tom de café escuro */
+    --secondary: #e6ccb2;     /* Tom de leite/espuma */
+    --dark: #3e2723;          /* Marrom bem escuro (texto) */
+    --light: #f5f0eb;         /* Fundo levemente bege */
+    --white: #ffffff;
+    --gray: #795548;
+    --border-color: #d7ccc8;
+    --shadow: 0 4px 12px rgba(62, 39, 35, 0.08);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ======= Header & Navegação ======= */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo-img {
+    height: 70px; 
+    width: auto;  
+    object-fit: contain;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.logo i, .logo span {
+    color: var(--primary);
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.nav-list a:hover {
+    color: var(--primary);
+}
+
+/* ======= Botões ======= */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn-nav {
+    background-color: var(--primary);
+    color: var(--white) !important;
+    padding: 0.5rem 1.2rem;
+}
+
+.btn-nav:hover {
+    background-color: var(--primary-dark);
+}
+
+/* ======= Hero Section ======= */
+.hero {
+    position: relative;
+    min-height: 85vh;
+    /* Imagem de fundo parallax */
+    background: url('assets/img/cafeteriafundo.jpeg') center/cover no-repeat fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(43, 27, 23, 0.7); /* Tom de café escuro */
+}
+
+.hero-content {
+    position: relative;
+    color: var(--white);
+    max-width: 750px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+/* ======= Seções Gerais ======= */
+.section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+    color: var(--dark);
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+/* ======= Benefícios ======= */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--light);
+    padding: 2.5rem 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1.2rem;
+}
+
+.card h3 {
+    margin-bottom: 0.8rem;
+}
+
+/* ======= Sabores (Bebidas) ======= */
+.flavors {
+    background-color: var(--light);
+}
+
+.flavor-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.tag {
+    background: var(--white);
+    border: 2px solid var(--primary);
+    color: var(--primary-dark);
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+    cursor: default;
+}
+
+.tag:hover {
+    background-color: var(--primary);
+    color: var(--white);
+    transform: scale(1.05);
+}
+
+/* ======= Depoimentos ======= */
+.testimonial-wrapper {
+    max-width: 620px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.testimonial-card {
+    background: var(--light);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+.testimonial-avatar {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid var(--primary);
+}
+
+.testimonial-quote {
+    font-style: italic;
+    margin-bottom: 1.2rem;
+    color: var(--gray);
+}
+
+.testimonial-name {
+    font-weight: 700;
+}
+
+.carousel-controls {
+    margin-top: 1.2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn-carousel {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    color: var(--dark);
+    padding: 0.6rem 1.4rem;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-carousel:hover {
+    background-color: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+/* ======= Formulário de Pedido  ======= */
+.order-form {
+    background-color: var(--white);
+}
+
+.form-container {
+    max-width: 600px;
+    background-color: var(--light);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.form-group-drink {
+    flex: 1;
+}
+
+.form-group-quantity {
+    width: 120px;
+    flex-shrink: 0;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group select {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: var(--transition);
+        width: 100%;
+}
+
+.form-group-quantity input[type="number"] {
+    text-align: center;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--primary);
+}
+
+.options-group {
+    border: none;
+    padding: 0;
+}
+
+.options-group legend {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.checkbox-container,
+.radio-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.custom-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 1rem;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    transition: var(--transition);
+}
+
+.btn-submit:not(:disabled):hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-submit:disabled {
+    background-color: #d7ccc8;
+    color: #8d6e63;
+    cursor: not-allowed;
+    opacity: 0.7;
+    box-shadow: none;
+    transform: none;
+}
+
+/* ======= Página de Agradecimento (grazzie.html) ======= */
+.thank-you-body {
+    min-height: 120vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.thank-you-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 1rem 2rem;
+}
+
+.thank-you-card {
+    text-align: center;
+    background: var(--light);
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    max-width: 500px;
+}
+
+.success-icon {
+    font-size: 4rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.thank-you-card h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.thank-you-card p {
+    margin-bottom: 1rem;
+    color: var(--gray);
+}
+
+.thank-you-card .btn {
+    margin-top: 1rem;
+}
+
+/* ======= Rodapé ======= */
+.footer {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 3rem 0 1.5rem;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-socials a {
+    color: var(--secondary);
+    font-size: 1.4rem;
+    transition: var(--transition);
+}
+
+.footer-socials a:hover {
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.footer-copyright {
+    font-size: 0.9rem;
+    color: var(--secondary);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+    width: 100%;
+}
+
+/* ======= Responsividade (Mobile First / Tablet / Mobile) ======= */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .nav-list {
+        gap: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .section {
+        padding: 3.5rem 0;
+    }
+
+    .form-container {
+        padding: 1.5rem;
+    }
+}

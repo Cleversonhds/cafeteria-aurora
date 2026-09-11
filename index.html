@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Cafeteria Aurora - Especial e rápida</title>
+    
+    <!-- jsDelivr para os Icones -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+    
+    <!-- Fontes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Cabeçalho Fixo -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src= "assets/img/logo.jpeg" alt="Logo Cafeteria Aurora" class="logo-img">  <span>Cafeteria Aurora</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#beneficios">Benefícios</a></li>
+                    <li><a href="#bebidas">Bebidas</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#pedido" class="btn btn-nav">Fazer Pedido</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section (Principal) -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>Seu café especial para começar bem o dia!</h1>
+            <p>Grãos selecionados, torra perfeita e preparo rápido para acompanhar o seu ritmo.</p>
+            <a href="#pedido" class="btn btn-primary">Pedir Agora</a>
+        </div>
+    </section>
+
+    <!-- Seção Benefícios -->
+    <section class="section benefits" id="beneficios">
+        <div class="container">
+            <h2 class="section-title">Por que escolher a Cafeteria Aurora?</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-seedling"></i></div>
+                    <h3>Café Selecionado</h3>
+                    <p>Trabalhamos apenas com grãos 100% arábica, cultivados nas melhores fazendas.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Preparo Rápido</h3>
+                    <p>Ideal para a sua rotina agitada. Seu café quentinho e perfeito em poucos minutos.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-star"></i></div>
+                    <h3>Experiência Única</h3>
+                    <p>Um ambiente moderno (e embalagens seguras) para tornar cada gole especial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Bebidas (Sabores) -->
+    <section class="section flavors" id="bebidas">
+        <div class="container">
+            <h2 class="section-title">Nosso Menu Clássico</h2>
+            <div class="flavor-tags">
+                <span class="tag"><i class="fa-solid fa-mug-saucer"></i> Café Espresso</span>
+                <span class="tag"><i class="fa-solid fa-mug-hot"></i> Cappuccino</span>
+                <span class="tag"><i class="fa-solid fa-droplet"></i> Mocha</span>
+                <span class="tag"><i class="fa-solid fa-snowflake"></i> Café Gelado</span>
+                <span class="tag"><i class="fa-solid fa-fire"></i> Chocolate Cremoso</span>
+            </div>
+        </div>
+    </section>
+
+   <!-- Seção Depoimentos -->
+    <section class="section testimonials" id="depoimentos" tabindex="0" aria-label="Seção de Depoimentos">
+        <div class="container">
+            <h2 class="section-title">O que dizem nossos clientes</h2>
+            <div class="testimonial-wrapper">
+                
+                <!-- Card completamente gerenciado pelo JavaScript -->
+                <div class="testimonial-card"></div>
+                
+                <!-- Indicadores do Carousel -->
+                <div class="carousel-dots" aria-label="Indicadores do carousel"></div>
+                
+                <!-- Controles do Carousel -->
+                <div class="carousel-controls">
+                    <button class="btn-carousel btn-carousel-prev" aria-label="Depoimento Anterior"><i
+                            class="fa-solid fa-arrow-left-long"></i> Anterior</button>
+                    <button class="btn-carousel btn-carousel-next" aria-label="Próximo Depoimento">Próximo <i
+                            class="fa-solid fa-arrow-right-long"></i></button>                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulário de Pedido -->
+    <section class="section order-form" id="pedido">
+        <div class="container form-container">
+            <h2 class="section-title">Peça o seu Café</h2>
+            <form action="obrigado.html" method="GET" class="form">
+                
+                <div class="form-group">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" name="name" required placeholder="Ex: Carlos Almeida">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Telefone</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="(99) 99999-9999">
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Endereço de Entrega</label>
+                    <input type="text" id="address" name="address" required placeholder="Rua, Número, Empresa/Apto">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group form-group-drink">
+                        <label for="drink">Escolha da Bebida</label>
+                        <select id="drink" name="drink" required>
+                            <option value="" disabled selected>Selecione uma bebida...</option>
+                            <option value="espresso">Café Espresso</option>
+                            <option value="cappuccino">Cappuccino</option>
+                            <option value="mocha">Mocha</option>
+                            <option value="gelado">Café Gelado</option>
+                            <option value="chocolate">Chocolate Cremoso</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group form-group-quantity">
+                        <label for="quantity">Quantidade</label>
+                        <input type="number" id="quantity" name="quantity" min="1" max="99" value="1" required>
+                    </div>
+                </div>
+
+                <fieldset class="form-group options-group">
+                    <legend>Adicionais</legend>
+                    <div class="checkbox-container">
+                        <label class="custom-control">
+                            <input type="checkbox" name="adicional" value="chantilly">
+                            <span>Adicionar Chantilly (+ R$ 3,00)</span>
+                        </label>
+                        <label class="custom-control">
+                            <input type="checkbox" name="adicional" value="leite-vegetal">
+                            <span>Trocar por Leite Vegetal (+ R$ 4,00)</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-group options-group">
+                    <legend>Forma de Pagamento</legend>
+                    <div class="radio-container">
+                        <label class="custom-control">
+                            <input type="radio" name="payment" value="pix" required>
+                            <span>Pix</span>
+                        </label>
+                        <label class="custom-control">
+                            <input type="radio" name="payment" value="cartao">
+                            <span>Cartão</span>
+                        </label>
+                        <label class="custom-control">
+                            <input type="radio" name="payment" value="dinheiro">
+                            <span>Dinheiro</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn btn-submit">Enviar Pedido</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <h3>Cafeteria Aurora</h3>
+                <p>O frescor de um novo dia em cada xícara.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2026 Cafeteria Aurora. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/carousel.js"></script>
+    <script src="js/form-validate.js"></script>
+
+</body>
+
+</html>
