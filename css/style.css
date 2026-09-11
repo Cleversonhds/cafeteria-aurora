@@ -368,6 +368,20 @@ body {
     border-color: var(--primary);
 }
 
+.form-group input.is-invalid,
+.form-group select.is-invalid {
+    border-color: #d9534f;
+    background-color: #fff8f8;
+}
+
+.error-message {
+    color: #c0392b;
+    font-size: 0.82rem;
+    font-weight: 500;
+    margin-top: 0.35rem;
+    display: block;
+}
+
 .options-group {
     border: none;
     padding: 0;
