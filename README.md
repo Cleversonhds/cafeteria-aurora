@@ -27,6 +27,10 @@ Projeto desenvolvido como parte do Desafio Web, com foco na criação de uma pá
 ├── /assets/            → Recursos visuais
 │   └── /images/        → Imagens de fundo, logos e avatares
 │
+├── /js/                → Scripts de interatividade
+│   ├── carousel.js     → Controle do carrossel de depoimentos
+│   └── form-validate.js→ Validação de campos e máscaras
+│
 └── README.md           → Documentação do projeto
 
 Agradecimentos Especiais & Créditos
