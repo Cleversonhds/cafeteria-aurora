@@ -162,6 +162,7 @@ body {
 /* ======= Seções Gerais ======= */
 .section {
     padding: 5rem 0;
+    scroll-margin-top: 100px;
 }
 
 .section-title {
